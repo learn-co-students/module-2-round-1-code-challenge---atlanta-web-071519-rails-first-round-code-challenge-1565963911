@@ -2,4 +2,10 @@
 <h2>Super Name: <%= @heroine.super_name %></h2>
 <h2>Power: <%= link_to(@heroine.power.name, power_path(@heroine.power)) %></h2>
 
-<%= button_to "List of Heroines", heroines_path, method: :get %><br>
+
+
+<%= button_to "Edit", edit_heroine_path(@heroine), method: :get %><br>
+
+<%= button_to "Delete", @heroine, method: :delete %><br>
+
+<%= button_to "List of Heroines", heroines_path, method: :get %>
