@@ -16,6 +16,15 @@
 
 <% end %><br>
 
+<div>
+<% if @heroine.errors.any? %>
+  <% @heroine.errors.full_messages.each do |msg| %>
+    <div>ERROR: <%= msg %></div>
+  <% end %>
+</div>
+<% end %>
+
+<br>
 
 
 <%= button_to "Go Back", heroines_path, method: :get %>

@@ -15,3 +15,12 @@
     <%= f.submit "Update Heroine" %>
 
 <% end %><br>
+
+<% if @heroine.errors.any? %>
+  <% @heroine.errors.full_messages.each do |msg| %>
+    <div>ERROR: <%= msg %></div>
+  <% end %>
+</div>
+<% end %>
+
+
