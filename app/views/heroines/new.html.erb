@@ -1,0 +1,15 @@
+<h1>New Heroine</h1>
+<ul>
+<%if @heroine.errors.present?%>
+<%@heroine.errors.full_messages.each do |msg|%>
+<li> <%=msg%> </li>
+<%end%>
+<%end%>
+</ul>
+
+<%=form_for @heroine do |f|%>
+Name: <%=f.text_field :name%><br>
+Super-Name: <%=f.text_field :super_name%><br>
+Power: <%=f.collection_select(:power_id, Power.all, :id, :name)%><br>
+<%=f.submit%>
+<%end%>
