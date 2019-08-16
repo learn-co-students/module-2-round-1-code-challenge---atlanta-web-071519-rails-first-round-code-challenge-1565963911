@@ -1,0 +1,4 @@
+<%# <%= link_to "Create a New Power", new_power_path %><br>
+<%# <%= link_to "All the Super Powers", powers_path %><br> 
+<%# <%= link_to "Create a New Heroine", new_heroine_path %><br> 
+<%# Her Power <%= link_to @heroine.power.name, power_path(@heroine.power)%> 

@@ -1,0 +1,14 @@
+
+<h1> Super Heroine: <%= @heroine.super_name %> </h1>
+<ul>
+<li>
+Real Name: <%= @heroine.name %>
+</li>
+<li>
+Her Power <%= link_to @heroine.power.name, power_path(@heroine.power)%> 
+</li>
+<br>
+
+
+<%= link_to "Create a New Heroine", new_heroine_path %><br> 
+
