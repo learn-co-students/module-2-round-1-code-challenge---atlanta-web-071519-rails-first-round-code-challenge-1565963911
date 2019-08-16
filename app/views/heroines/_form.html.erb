@@ -1,0 +1,16 @@
+<% if @heroine.errors.present? %>
+  <p>Could not save your employee.</p>
+  <ul>
+  <% @heroine.errors.full_messages.each do |msg| %>
+    <%= msg %>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@heroine) do |f| %>
+
+    <%= f.text_field(:name) %>
+    <%= f.text_field(:super_name) %>
+    <%= f.collection_select(:power_id, Power.all, :id, :name) %>
+    <%= f.submit %>
+<% end %>
